@@ -20,28 +20,28 @@
 #define PS2_MODE_RED  		0x73
 
 /*******PS2按键检测表*******/
-#define PS2_LEFT_UP				!(ps2_buf[3]&0x10)
-#define PS2_LEFT_RIGHT		!(ps2_buf[3]&0x20)
-#define PS2_LEFT_DOWN			!(ps2_buf[3]&0x40)
-#define PS2_LEFT_LEFT			!(ps2_buf[3]&0x80)
+#define PS2_LEFT_UP !(ps2_buf[3] & 0x10)	/* 左侧对应的上下左右键 */
+#define PS2_LEFT_RIGHT !(ps2_buf[3] & 0x20) /* 左侧对应的上下左右键 */
+#define PS2_LEFT_DOWN !(ps2_buf[3] & 0x40)	/* 左侧对应的上下左右键 */
+#define PS2_LEFT_LEFT !(ps2_buf[3] & 0x80)	/* 左侧对应的上下左右键 */
 
-#define PS2_SELECT				!(ps2_buf[3]&0x01)
-#define PS2_START					!(ps2_buf[3]&0x08)
+#define PS2_SELECT !(ps2_buf[3] & 0x01) /* SELECT */
+#define PS2_START !(ps2_buf[3] & 0x08)	/* START */
 
-#define PS2_RIGHT_UP			!(ps2_buf[4]&0x10)
-#define PS2_RIGHT_RIGHT		!(ps2_buf[4]&0x20)
-#define PS2_RIGHT_DOWN		!(ps2_buf[4]&0x40)
-#define PS2_RIGHT_LEFT		!(ps2_buf[4]&0x80)
+#define PS2_RIGHT_UP !(ps2_buf[4] & 0x10)	 /* 右侧对应的XYAB键 */
+#define PS2_RIGHT_RIGHT !(ps2_buf[4] & 0x20) /* 右侧对应的XYAB键 */
+#define PS2_RIGHT_DOWN !(ps2_buf[4] & 0x40)	 /* 右侧对应的XYAB键 */
+#define PS2_RIGHT_LEFT !(ps2_buf[4] & 0x80)	 /* 右侧对应的XYAB键 */
 
-#define PS2_LEFT_2				!(ps2_buf[4]&0x01)
-#define PS2_RIGHT_2				!(ps2_buf[4]&0x02)
-#define PS2_LEFT_1				!(ps2_buf[4]&0x04)
-#define PS2_RIGHT_1				!(ps2_buf[4]&0x08)
+#define PS2_LEFT_2 !(ps2_buf[4] & 0x01)	 /* LT左边2键 */
+#define PS2_RIGHT_2 !(ps2_buf[4] & 0x02) /* RT右边2键 */
+#define PS2_LEFT_1 !(ps2_buf[4] & 0x04)	 /* LB左边1键 */
+#define PS2_RIGHT_1 !(ps2_buf[4] & 0x08) /* RB右边1键 */
 
-#define PS2_RIGHT_X				(int)(ps2_buf[5]-0x7f)
-#define PS2_RIGHT_Y				(int)(ps2_buf[6]-0x80)
-#define PS2_LEFT_X				(int)(ps2_buf[7]-0x7f)
-#define PS2_LEFT_Y				(int)(ps2_buf[8]-0x80)
+#define PS2_RIGHT_X (int)(ps2_buf[5] - 0x7f) /* RS的X轴偏移大小 */
+#define PS2_RIGHT_Y (int)(ps2_buf[6] - 0x80) /* RS的Y轴偏移大小 */
+#define PS2_LEFT_X (int)(ps2_buf[7] - 0x7f)	 /* LS的X轴偏移大小 */
+#define PS2_LEFT_Y (int)(ps2_buf[8] - 0x80)	 /* LS的Y轴偏移大小 */
 
 /*******PS2管脚映射表*******/
 #define PS2_DAT			GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_15)

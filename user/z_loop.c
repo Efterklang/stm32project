@@ -17,7 +17,7 @@
 	返回值：		无
  ***********************************************/
 void loop_ps2(void) {
-	static u32 systick_ms_bak = 0;
+	static u32 systick_ms_bak = 0; // 时钟 单位ms
 	static u32 last_right_x = 0, last_right_y = 0, last_left_x = 0, last_left_y = 0;
 	if(millis() - systick_ms_bak >= 20) {
 		systick_ms_bak = millis();

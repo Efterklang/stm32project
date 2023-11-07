@@ -16,10 +16,10 @@
             "path": "../Libraries/Startup/core_cm3.c"
           },
           {
-            "path": "../Libraries/Startup/system_stm32f10x.c"
+            "path": "../Libraries/Startup/startup_stm32f10x_hd.s"
           },
           {
-            "path": "../Libraries/Startup/startup_stm32f10x_hd.s"
+            "path": "../Libraries/Startup/system_stm32f10x.c"
           }
         ],
         "folders": []
@@ -28,19 +28,19 @@
         "name": "Libraries",
         "files": [
           {
-            "path": "../src/z_stm32f10x_it.c"
-          },
-          {
-            "path": "../Libraries/src/stm32f10x_rcc.c"
+            "path": "../Libraries/src/misc.c"
           },
           {
             "path": "../Libraries/src/stm32f10x_gpio.c"
           },
           {
+            "path": "../Libraries/src/stm32f10x_rcc.c"
+          },
+          {
             "path": "../Libraries/src/stm32f10x_usart.c"
           },
           {
-            "path": "../Libraries/src/misc.c"
+            "path": "../src/z_stm32f10x_it.c"
           }
         ],
         "folders": []
